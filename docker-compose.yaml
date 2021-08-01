@@ -1,0 +1,12 @@
+---
+
+version: '3.8'
+
+services:
+  cypress:
+    image: cypress/included:8.1.0
+    working_dir: /var/local/app/
+    volumes:
+      - type: bind
+        source: ${PWD}/e2e/
+        target: /var/local/app/
